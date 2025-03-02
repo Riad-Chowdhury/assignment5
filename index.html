@@ -23,9 +23,9 @@
                 <div class="flex-none">
                   <div class="dropdown dropdown-end">
                     <div tabindex="0" role="button" class="btn btn-ghost btn-circle">
-                      <div class="indicator gap-2">
+                      <div class="flex justify-center items-center gap-1">
                         
-                        <input type="checkbox" >
+                        <img src="assets/checkbox.png" alt="">
                         <label id="box1" class="font-bold" for="vehicle1"> 18</label><br>
 
                       </div>
@@ -36,7 +36,7 @@
                     <div tabindex="0" role="button" class="btn btn-ghost btn-circle avatar">
                       <div class="w-10 rounded-full">
                         
-                        <img id="nav-btn" src="A5-Dev-Board/assets/theme-btn.png" alt="">
+                        <img id="nav-btn" src="assets/theme-btn.png" alt="">
 
 
                       </div>
@@ -54,21 +54,22 @@
                 <!-- part 2 -->
                 <div class="flex gap-2 px-2 mt-3 justify-center items-center">
                     <div class="px-2 bg-[#F4F7FF] w-64 h-32 flex justify-center items-center gap-2 rounded-xl">
-                        <input id="box" class="w-7 h-16" type="checkbox">
-                        <div class="">
-                            <p>Task Assigned</p>
+                        <div class="flex justify-center items-center gap-3">
+                          <img src="assets/checkbox.png" alt="">
+                            <div>
+                              <p>Task Assigned</p>
                             <h1 id="box2" class="text-2xl font-bold">06</h1>
+                            </div>
                         </div>
                     </div>
                     <div id="big-btn" class="bg-blue-600 w-[440px] h-32 flex justify-center items-center rounded-xl">
-                        <img src="A5-Dev-Board/assets/board.png" alt="">
-                        <p class="text-white">Discover Something New Today!</p>
+                        <img src="assets/board.png" alt="">
+                        <p class="text-white">Discover Something <br> New Today!</p>
                     </div>
                     <div class="bg-[#F4F7FF] w-64 h-32 flex justify-center items-center gap-2 rounded-xl">
-                        <img src="A5-bDev-Board/assets/calender.png" alt="">
-                        <div class="">
-                            <p>hello world</p>
-                            <h1 class="text-2xl font-bold">023320</h1>
+                        <div class="flex justify-center items-center gap-2">
+                            <img src="assets/calender.png" alt="">
+                            <h1 id="date-H2" class="text-xl"></h1>
                         </div>
                     </div>
                 </div>
@@ -173,13 +174,13 @@
             
 
 
-            <div class="bg-white">
+            <div id="add-p" class="bg-white">
               <div class="flex flex-col justify-center items-center mt-5 gap-3 border-b border-dotted border-gray-500 py-2">
                 <p><i class="fa-regular fa-clock"></i><span class="font-bold ml-3">Activity Log</span></p>
-                <button class="btn btn-primary">Clear History</button>
+                <button id="History" class="btn btn-primary">Clear History</button>
               </div>
-              <div class="">
-                <p id="p1" class="">riad</p>
+              <div class="remov-div">
+                
               </div>
             </div>
         </div>
@@ -190,61 +191,7 @@
 
 
 
-<script>
-   const bgColor = document.querySelector('#bg-color')
- const navBtn = document.querySelector('#nav-btn'); 
-navBtn.addEventListener('click',function(event){
-     const color = rendomColor()
-    bgColor.style.background = color
-})
-function rendomColor(){
-  let red = Math.floor(Math.random() * 225)
-  let blue = Math.floor(Math.random() * 225)
-  let green = Math.floor(Math.random() * 225)
-  return `rgb(${red},${blue},${green})`
-}
 
-// big button
-const bigBtn = document.querySelector('#big-btn')
-bigBtn.addEventListener('click',function(){
-  window.location.href="node.html"
-  
-})
-
-// ----------- bard btn
- let btn = document.querySelectorAll('#card-btn')
-// buttons.addEventListener('click',function(){
-//   alert()
-// })
-
-  for(let buttons of btn){
-        buttons.addEventListener('click',function(event){
-         alert()
-         buttons.disables=true   
-         buttons.style.background = 'silver'
-        const stBox1 = document.querySelector('#box1').innerText;
-          const convertStBox1 = parseFloat(stBox1);
-          const plus = convertStBox1 + 1
-          document.querySelector('#box1').innerText = plus
-          
-          const stBox2 = document.querySelector('#box2').innerText;
-          const convertStBox2 = parseFloat(stBox2);
-          const minus = convertStBox2 - 1
-          document.querySelector('#box2').innerText = minus
-          
-
-        })
-  }
-
- 
-// add p
-
-
-
-
-
-
-</script>
 <script src="index.js"></script>
 </body>
 </html>  

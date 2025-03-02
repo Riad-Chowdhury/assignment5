@@ -11,6 +11,11 @@ function rendomColor(){
  return `rgb(${red},${blue},${green})`
 }
 
+const time = new Date()
+const date1 = time.toLocaleDateString('en-us',{dateStyle:'long'});
+const date2 = time.toLocaleDateString('en-us',{weekday:'short'});
+document.querySelector('#date-H2').innerHTML = `${date2},<br>${date1}`;
+
 // big button
 const bigBtn = document.querySelector('#big-btn')
 bigBtn.addEventListener('click',function(){
@@ -38,8 +43,25 @@ let btn = document.querySelectorAll('#card-btn')
          const convertStBox2 = parseFloat(stBox2);
          const minus = convertStBox2 - 1
          document.querySelector('#box2').innerText = minus
-         
 
+
+        const myDiv  = document.querySelector('.remov-div')
+         const p = document.createElement('p')
+         p.innerText = `you have completed the task ${buttons.closest('.card').querySelector('h2').innerText} at ${(new Date()).toLocaleTimeString()}`;
+
+         myDiv.appendChild(p)
        })
+
+      
  }
+
+ const Historybtn = document.querySelector('#History').addEventListener('click',function(){
+    document.querySelector('.remov-div').innerHTML = '';
+ })
+
+
+
+
+
+
 
