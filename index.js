@@ -31,7 +31,7 @@ let btn = document.querySelectorAll('#card-btn')
 
  for(let buttons of btn){
        buttons.addEventListener('click',function(event){
-        alert()
+        alert('board updated successfully')
         buttons.disables=true   
         buttons.style.background = 'silver'
        const stBox1 = document.querySelector('#box1').innerText;
